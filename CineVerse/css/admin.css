@@ -1,0 +1,14 @@
+body { display: flex; min-height: 100vh; background-color: var(--primary-bg); color: #fff; }
+.sidebar { width: 260px; background-color: var(--secondary-bg); padding: 20px; transition: all 0.3s; border-right: 1px solid #222; }
+.sidebar a { color: var(--text-muted); text-decoration: none; display: block; padding: 12px 15px; margin-bottom: 8px; border-radius: 6px; font-weight: 500; }
+.sidebar a:hover, .sidebar a.active { background-color: var(--accent-color); color: white; }
+.main-content { flex: 1; padding: 30px; overflow-y: auto; }
+.table { color: var(--text-main); }
+.table-dark { background-color: var(--secondary-bg); border-color: #333; }
+.table-dark th { background-color: #1a1a24; color: var(--text-muted); border-color: #333; }
+.table-dark td { border-color: #333; vertical-align: middle; }
+.card { background-color: var(--secondary-bg); border: 1px solid #333; }
+@media (max-width: 768px) {
+    .sidebar { position: fixed; transform: translateX(-100%); z-index: 1050; height: 100vh; }
+    .sidebar.show { transform: translateX(0); }
+}
